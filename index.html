@@ -847,7 +847,7 @@
     .hand-group { display: flex; flex-wrap: wrap; gap: 2px; justify-content: center; max-width: 240px; }
     .hand-finger { font-size: 2rem; animation: itemIn 0.3s ease backwards; }
 
-    .pattern-row { display: flex; align-items: center; gap: 0.4rem; flex-wrap: nowrap; justify-content: center; direction: rtl; max-width: 100%; }
+    .pattern-row { display: flex; align-items: center; gap: 0.4rem; flex-wrap: nowrap; justify-content: center; direction: ltr; max-width: 100%; }
     .pattern-item { font-size: clamp(1.45rem, 5.6vw, 2.3rem); animation: itemIn 0.3s ease backwards; flex: 0 0 auto; }
     .pattern-q {
       flex: 0 0 auto;
@@ -1864,10 +1864,10 @@
       return {
         core: shown % unit.length,
         ans: next,
-        q: "الگو را از راست به چپ نگاه کن… حالا نوبت کدام است؟ 🧐",
+        q: "الگو را از چپ به راست نگاه کن… حالا نوبت کدام است؟ 🧐",
         vis: '<div class="pattern-row">' + seq + '<span class="pattern-q">؟</span></div>',
         opts: shuffle([next].concat(others)).map((e) => ({ v: e, l: '<span style="font-size:1.8rem">' + e + "</span>" })),
-        hint: "از اولین شکل در سمت راست شروع کن و به سمت چپ ادامه بده: " + unit.map((u) => u).join(" ") + " …"
+        hint: "از اولین شکل در سمت چپ شروع کن و به سمت راست ادامه بده: " + unit.map((u) => u).join(" ") + " …"
       };
     }
 
@@ -2594,5 +2594,5 @@
     renderThemes();
   })();
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5b8300c6d96b192',t:'MTc5NDg0OTg1MA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5b8300c6d96b192',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
